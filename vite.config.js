@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
-  base: "/calcu/",  // your GitHub repo name
+  base: "/calendar-app/",  // GitHub repo name
 
   plugins: [
     react(),
@@ -13,15 +13,15 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["pwa-192x192.png", "pwa-512x512.png"],
       manifest: {
-        name: "Calculator App",
-        short_name: "Calc",
+        name: "Calendar App",
+        short_name: "Calendar",
         theme_color: "#000000",
         background_color: "#ffffff",
         display: "standalone",
 
-        // ---- IMPORTANT FIX ----
-        start_url: "/calcu/", 
-        scope: "/calcu/",
+        // Correct URLs for GitHub Pages
+        start_url: "/calendar-app/",
+        scope: "/calendar-app/",
 
         icons: [
           {
